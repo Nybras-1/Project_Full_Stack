@@ -1,0 +1,123 @@
+body {
+
+    background-image: url("../IMAGE/fonfo_login2.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.linea1 {
+    position: absolute;
+    width: 200px;
+    height: 0px;
+    left: 1030px;
+    top: 183px;
+    opacity: 0.2;
+    border: 8px solid rgba(255, 253, 253, 0.8);
+}
+
+.linea2 {
+    position: absolute;
+    width: 200px;
+    height: 0px;
+    left: 1440px;
+    top: 183px;
+    opacity: 0.2;
+    border: 8px solid rgba(255, 253, 253, 0.8);
+}
+
+
+.icon_login {
+    position: absolute;
+    width: 185px;
+    height: 172px;
+    left: 1249px;
+    top: 97px;
+}
+
+.menu {
+    box-sizing: border-box;
+    position: absolute;
+    width: 1267.5px;
+    height: 1080px;
+    left: 653px;
+    top: 9px;
+    background: linear-gradient(353.04deg, #8D8CD0 48.16%, rgba(200, 118, 118, 0) 95.05%);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 29px;
+}
+
+.content_user {
+    box-sizing: border-box;
+    position: absolute;
+    width: 640px;
+    height: 72px;
+    left: 29%;
+    top: 384px;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+.sesion_icon {
+    /*position: absolute;*/
+    width: 50px;
+    height: 50px;
+    /*left: 1068px;
+    top: 403px;*/
+    padding: 9px;
+}
+
+
+.input-data {
+    box-sizing: border-box;
+    position: absolute;
+    width: 570px;
+    height: 70px;
+    /*left: 1123px;
+    top: 386px;*/
+    background: rgba(217, 217, 217, 0.8);
+    border-radius: 8px;
+}
+
+/*INFORMACIO DEL CAMPO PASS*/
+.content_pass {
+    box-sizing: border-box;
+    position: absolute;
+    width: 640px;
+    height: 72px;
+    left: 29%;
+    top: 490px;
+    border: 2px solid #FFFFFF;
+    border-radius: 8px;
+}
+
+.pass_icon {
+    width: 50px;
+    height: 51px;
+    padding: 9px;
+    ;
+    /* position: absolute;
+    left: 1063px;
+    top: 505px;*/
+}
+
+.login_form {
+    box-sizing: border-box;
+    position: absolute;
+    width: 649px;
+    height: 80px;
+    left: 29%;
+    top: 610px;
+    background: #5A57DE;
+    border: 2px solid rgba(255, 251, 251, 0.35);
+    border-radius: 8px;
+    font-family: 'Rubik';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 160.02%;
+    /* or 38px */
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FBF8F8;
+}
