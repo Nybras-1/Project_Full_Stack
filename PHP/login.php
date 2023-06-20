@@ -24,7 +24,7 @@
                 <form method="post" action="../BD/valid_conexion.php">
                     <div class="content_user">
                         <a><img class="sesion_icon" src="../IMAGE/usuario_sesion.png" alt="user"></a>
-                        <label for="user">Usuariosdd:</label>
+                        <label for="user">Usuariosss:</label>
                         <input type="text" id="user" name="usuarioo" class="input-data" required>
                     </div>
                     <div class="content_pass">
@@ -36,7 +36,13 @@
                 </form>
             </div>
         </section>
+
+
+
     </main>
+    <?php
+
+    ?>
 </body>
 
 </html>

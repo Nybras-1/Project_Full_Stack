@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/reset.css">
+    <link rel="stylesheet" href="CSS/dashboard2.css">
+    <!-- <link rel="stylesheet" href="CSS/home.css"> -->
+    <title>DASHBOARD</title>
+</head>
+
+<body>
+
+    <section class="section">
+        <div class="section1">
+            <input type="text" id="city" required placeholder="Ingrese Ubicacion.....">
+            <button id="btnWeather" class="buscador">Boton</button>
+            <hr>
+        </div>
+        <div class="section2"></div>
+    </section>
+
+    <section class="section3">
+        <div class="div1">
+            <div class="submenu">
+                <label>HUMEDAD</label>
+                <label>TEMPERATURAyyy</label>
+                <label>VELOCIDADs VIENTO</label>
+                <label>TEMPERATURA MAXIMA</label>
+            </div>
+
+            <div class="submenu-info">
+                <label id="humidity"></label>
+                <label Id="temp"></label>
+                <label Id="speed"></label>
+                <label Id="temp_max"></label>
+                <label id="deg" style="display: none;"></label>
+                <label id="gust" style="display: none;"></label>
+            </div>
+        </div>
+
+ 
+        <div class="div2"></div>
+        <div class="div3">
+            <canvas id="myChart"></canvas>
+        </div>
+        <div class="div4"></div>
+        <div class="div5"></div>
+    </section>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.js"></script>
+    <script src="../PROJECT/JS/dashboard.js"></script>
+</body>
+
+</html>

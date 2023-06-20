@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/reset.css">
     <link rel="stylesheet" href="CSS/home.css">
+    <script src="../PROJECT/JS/info_ciudad.js"></script>
     <title>INDEX</title>
 </head>
 
@@ -29,15 +30,14 @@
         </header>
         <section id="information">
             <div class="busqueda">
-                <input type="text" id="ubicacion"  placeholder="Ingrese Ubicación...">
-                <button class="buscador" onclick="buscarClima()">Boton</button>
-                <p>Ingrese Ubicación...</p>
+                <input type="text" id="city" required placeholder="Ingrese Ubicacion.....">
+                <button class="buscador" onclick="getWeather()">Boton</button>
                 <hr>
             </div>
             <div class="historial">
                 <ul>
                     <li class="miga_pan">INFORMACION 1</li>
-                    <li class="miga_pan">INFORMACION 22</li>
+                    <li class="miga_pan">INFORMACION 2</li>
                     <li class="miga_pan">INFORMACION 3</li>
                     <li class="miga_pan">INFORMACION 4</li>
                 </ul>
@@ -47,56 +47,31 @@
                 <p class="detalleclima">Detalles del Clima</p>
                 <table>
                     <tr>
-                        <td>precipitaciones</td>
-                        <td class="deta_clima">70%</td>
+                        <td>temperatura actuall</td>
+                        <td Id="temp"></td>
+                    </tr>
+                    <tr>
+                        <td>velocidad del viento</td>
+                        <td id="wind-speed"></td>
                     </tr>
                     <tr>
                         <td>Humedad</td>
-                        <td class="deta_clima">54%</td>
-                    </tr>
-                    <tr>
-                        <td>VIENTOS</td>
-                        <td class="deta_clima">8KM/H</td>
+                        <td id="humidity"></td>
                     </tr>
                 </table>
                 <hr>
             </div>
-            <div>
-                <p class="descripticion">BOGOTÁ</p>
-                <p class="detalle_descriptcion">Bogotá es la extensa capital en altura de Colombia. La Candelaria, su centro con adoquines,
+            <!-- id="city_info"-->
+            <p class="descripticion">CIUDAD</p>
+            <div  id="city_info"></div>
+            <!-- class="detalle_descriptcion" -->
+            <!-- <p> Bogotá es la extensa capital en altura de Colombia. La Candelaria, su centro con adoquines,
                     cuenta con sitios coloniales como el Teatro Colón neoclásico y la Iglesia de San Francisco del siglo XVII.
                     También alberga museos populares, incluido el Museo Botero, que exhibe arte de Fernando Botero, y el Museo del Oro,
-                    con piezas de oro precolombinas,</p>
-            </div>
+                    con piezas de oro precolombinas,</p> -->
+            <!--<button onclick="getWeather()">Obtener información de la ciudad</button> -->
+
         </section>
-        <script>
-            function buscarClima() {
-                var ubicacionInput = document.getElementById('ubicacion');
-                var ubicacion = ubicacionInput.value;
-                var apiKey = '55103935b479c3a77be0493c070df8d1'; // Reemplaza con tu clave de API WeatherAPI
-
-                // Realizar solicitud a la API
-                fetch('https://api.weatherapi.com/v1/current.json?key=' + apiKey + '&q=' + ubicacion)
-                    .then(response => response.json())
-                    .then(data => {
-                        // Mostrar información en los campos correspondientes
-                        document.getElementById('precipitaciones').textContent = data.current.precip_mm + ' mm';
-                        document.getElementById('humedad').textContent = data.current.humidity + '%';
-                        document.getElementById('vientos').textContent = data.current.wind_kph + ' km/h';
-                        document.getElementById('ubicacion-title').textContent = data.location.name;
-                        document.getElementById('ubicacion-description').textContent = data.location.description;
-
-                        // Agregar la ubicación al historial
-                        var historialList = document.getElementById('historial-list');
-                        var historialItem = document.createElement('li');
-                        historialItem.textContent = data.location.name;
-                        historialList.appendChild(historialItem);
-                    })
-                    .catch(error => {
-                        console.log('Error:', error);
-                    });
-            }
-        </script>
 
     </main>
 
